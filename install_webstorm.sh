@@ -4,7 +4,7 @@ varname=$(basename $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/hom
 proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 wget https://download.jetbrains.com/webstorm/WebStorm-2023.3.3-aarch64.tar.gz -O webstorm.tar.gz
 proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 sudo -S apt install default-jdk -y
 proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 sudo -S tar xzf webstorm.tar.gz
-proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 sudo -S mv WebStorm-2023.3.3-aarch64/ /opt/webstorm
+proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 sudo -S mv WebStorm-233.14015.89 /opt/webstorm
 proot-distro login debian --user $varname --shared-tmp -- env DISPLAY=:1.0 sudo -S chmod +x /opt/webstorm/bin/webstorm.sh
 
 # Create the desktop entry
