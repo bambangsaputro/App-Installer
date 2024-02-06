@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#apt-get install bsdmainutils
 # Function to display a message
 msg() {
     color=$1
@@ -38,7 +38,7 @@ _i() {
     echo -e "\n$green Please ensure that you have a stable internet connection.$white"
 
     # Download the WPS Office package for ARM64 architecture
-    wget -c https://archive.ubuntukylin.com/ubuntukylin/pool/partner/wps-office_11.1.0.11704_amd64.deb -O /opt/wps-office.deb
+    wget -c https://archive.ubuntukylin.com/ubuntukylin/pool/partner/wps-office_11.1.0.11704_arm64.deb -O /opt/wps-office.deb
     if [ "$?" -eq "0" ]; then
         sudo dpkg -i /opt/wps-office.deb
         msg $green "WPS Office has been installed successfully!"
